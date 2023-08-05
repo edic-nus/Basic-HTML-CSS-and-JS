@@ -78,6 +78,6 @@ ul {
 }
 
 /* Complete item */
-#completed-tasks {
+#completed-tasks h4{
   text-decoration: line-through;
 }

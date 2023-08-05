@@ -49,6 +49,9 @@ function createNewTask(addValue) {
 }
 
 function editButtonHandler() {
+  console.log(this)
+  console.log(this.parentNode)
+  console.log(this.parentNode.children[2])
   if (this.parentNode.className == "edit-mode") {
     this.parentNode.className = "view-mode"
     let h4 = this.parentNode.children[1]
@@ -72,9 +75,13 @@ function checkBoxHandler() {
   }
 }
 
+var checkBoxes = document.querySelectorAll("input[type=checkbox]");
+var editButtons = document.querySelectorAll(".edit");
+var deleteButtons = document.querySelectorAll(".delete");
 
-
-
+checkBoxes.forEach(box => box.onchange = checkBoxHandler)
+editButtons.forEach(button => button.onclick = editButtonHandler)
+deleteButtons.forEach(button => button.onclick = deleteButtonHandler)
 
 
 

@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="index.css" type="text/css" media="screen" charset="utf-8">
 </head>
 
+
 <body>
   <div class="container">
     <h3>Add Item</h3>
@@ -16,36 +17,38 @@
 
     <h3>Todo</h3>
     <ul id="incomplete-tasks">
+      <li class="view-mode">
+        <input type="checkbox">
+        <h4>Maybe see financial advisor</h4>
+        <input id="edit-input" type="text" value="Maybe see financial advisor">
+        <button class="edit">Edit</button>
+        <button class="delete">Delete</button>
+      </li>
 
       <li class="view-mode">
         <input type="checkbox">
-        <h4>Pay Bills</h4>
-        <input id="edit-input" type="text">
-        <button class="edit">Edit</button>
+        <h4>Pay Bills Again</h4>
+        <input id="edit-input" type="text" value="Pay Bills Again">
+        <button class="edit" onclick="editButtonHandler">Edit</button>
         <button class="delete">Delete</button>
       </li>
-
-      <li class="edit-mode">
-        <input type="checkbox">
-        <h4>Go Shopping</h4>
-        <input id="edit-input" type="text" value="Go Shopping">
-        <button class="edit">Edit</button>
-        <button class="delete">Delete</button>
-      </li>
-
     </ul>
 
     <h3>Completed</h3>
     <ul id="completed-tasks">
       <li class="view-mode">
-        <input type="checkbox" checked="">
-        <h4>See the Doctor</h4>
-        <input id="edit-input" type="text">
-        <button class="edit">Edit</button>
+        <input type="checkbox" checked>
+        <h4>Pay Bills</h4>
+        <input id="edit-input" type="text" value="Pay Bills">
+        <button class="edit" onclick="editButtonHandler">Edit</button>
         <button class="delete">Delete</button>
       </li>
     </ul>
   </div>
+
+  <script>
+    console.log("Hi this is an example of JS code in HTML")
+  </script>
 
   <script type="text/javascript" src="index.js"></script>
 </body>
