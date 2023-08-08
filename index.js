@@ -6,7 +6,6 @@ var incompleteTasksList = document.getElementById("incomplete-tasks");
 var completedTasksHolder = document.getElementById("completed-tasks");
 
 addItemButton.addEventListener("click", function addTask() {
-  console.log(`Add Item Button press: ${addItemInput.value}`)
   if (addItemInput.value !== "") {
     var listItem = createNewTask(addItemInput.value)
     incompleteTasksList.appendChild(listItem);
@@ -49,9 +48,6 @@ function createNewTask(addValue) {
 }
 
 function editButtonHandler() {
-  console.log(this)
-  console.log(this.parentNode)
-  console.log(this.parentNode.children[2])
   if (this.parentNode.className == "edit-mode") {
     this.parentNode.className = "view-mode"
     let h4 = this.parentNode.children[1]
